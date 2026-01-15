@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização do produto</title>
+    <link rel="stylesheet" href="../css/Fstyle.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="cadastrar_banner.php" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Adicionar Banner</h3>
+                    <div class="input-box">
+                        <span>Nome :</span>
+                        <input type="text" name="nome" placeholder="Ex.: Promoção de outubro" >
+                    </div>
+
+                    <div class="input-box img">
+                        <span>Banner :</span>
+                        <input type="file" name="imagem" data-image-input>
+                    </div>
+                    <div class="preview-image">
+                        <img data-image-preview height="100%">
+                    </div>
+                <script>
+                    const imageInput = document.querySelector("[data-image-input]");
+                    const imagePreviewElement = document.querySelector("[data-image-preview]");
+
+                    imageInput.onchange = () => {
+                    const [file] = imageInput.files;
+                    imagePreviewElement.src = URL.createObjectURL(file);
+                    };
+                </script>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Adicionar banner</button>
+        </form>
+    </div>
+
+</body>
+</html>

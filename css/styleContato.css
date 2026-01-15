@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa; 
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-hero {
+  background-color: #11213c; 
+  background-size: cover;
+  background-position: center;
+  
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.contact-hero p {
+  font-size: 1.1rem;
+  color: #cdd4e0;
+}
+
+.contact-card-container {
+  display: flex;
+  flex-wrap: wrap; 
+  max-width: 1200px;
+  width: 90%;
+  margin: -50px auto 50px auto; 
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}
+
+.get-in-touch {
+  flex-basis: 50%; 
+  flex-grow: 1;
+  padding: 40px;
+  border-right: 1px solid #f0f0f0;
+}
+.get-in-touch h2 {
+  font-weight: 600;
+  color: #11213c;
+  margin-bottom: 10px;
+}
+.get-in-touch > p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.info-item i {
+  font-size: 24px;
+  color: #eb1d25; 
+  margin-top: 5px;
+}
+.info-item h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+.info-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.get-in-touch h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 30px;
+}
+.social-links-contact {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.social-links-contact a {
+  font-size: 28px;
+  color: #11213c;
+  transition: color 0.3s ease;
+}
+.social-links-contact a:hover {
+  color: #eb1d25;
+}
+
+.whatsapp-payment {
+  flex-basis: 50%;
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #fdfdfd; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.whatsapp-payment h2 {
+  font-weight: 600;
+  color: #11213c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.whatsapp-payment h2 i {
+  font-size: 2rem;
+  color: #25D366; 
+}
+.whatsapp-payment p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.whatsapp-button:hover {
+  background-color: #1DAE51;
+  color: #ffffff;
+}
+
+
+.map-container-full {
+  width: 100%;
+  margin-bottom: -10px; 
+}
+
+.map-container-full iframe {
+  width: 100%;
+  border: 0;
+  display: block; 
+}
+
+@media (max-width: 900px) {
+  .contact-card-container {
+      width: 95%;
+      flex-direction: column;
+      margin-top: -30px;
+  }
+  .get-in-touch {
+      border-right: none;
+      border-bottom: 1px solid #f0f0f0;
+  }
+  .contact-hero {
+    padding: 40px 20px;
+  }
+}

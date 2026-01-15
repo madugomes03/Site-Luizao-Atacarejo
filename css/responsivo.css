@@ -1,0 +1,820 @@
+* {
+  box-sizing: border-box;
+}
+
+/* --- VERSÃO DESKTOP / TABLET --- */
+@media (max-width: 992px) {
+
+  header .menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 25px;
+    width: 100%;
+  }
+
+  .mobile-menu-button {
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #11213c;
+    cursor: pointer;
+  }
+
+  header .logo {
+    order: 2;
+    flex: 1;
+    text-align: center;
+  }
+
+  header .navcart {
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #11213c;
+    color: #ffffff;
+    width: 35px;  /* Tamanho Reduzido */
+    height: 35px; /* Tamanho Reduzido */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Ajuste para diminuir o ícone do carrinho */
+  header .navcart i, 
+  header .navcart svg {
+      font-size: 20px !important; 
+      width: 20px !important;     
+      height: 20px !important;
+  }
+
+  header .navcart span {
+      width: 14px;
+      height: 14px;
+      font-size: 9px;
+      right: -2px;
+      top: -2px;
+  }
+
+  header .search-container {
+    order: 4;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header .search-container .search-bar {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  header .search-container .search-button {
+    background-color: #11213c;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .menu-categorias {
+    display: none;
+  }
+
+  .mobile-menu-panel {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 85%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1200;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.15);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column;
+  }
+
+  .mobile-menu-panel.open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+  }
+
+  .mobile-menu-header .mobile-menu-logo {
+    display: block;
+    line-height: 0; 
+  }
+  
+  .mobile-menu-header .mobile-menu-logo img {
+    height: 35px; 
+    width: auto;  
+  }
+ 
+  .mobile-menu-close-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .mobile-menu-content {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
+  .mobile-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    background-color: transparent; 
+    color: #11213c; 
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .mobile-dropdown .dropdown-toggle::after {
+      display: none;
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .mobile-menu-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .subcategoria-content {
+    display: block; 
+    margin-bottom: 0;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  section.mercearia {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mobile-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 15px 15px 15px;
+  }
+
+  .filter-button {
+    background-color: #fff;
+    color: #11213c;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .filter-sidebar {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    max-width: 85%;
+    background-color: #ffffff;
+    z-index: 1100;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .filter-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .close-filter-button {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Classes das OUTRAS páginas (Grade) */
+  .mercearia .container,
+  .hortifruti .container,
+  .acougue .container,
+  .limpeza .container,
+  .higiene .container,
+  .frios .container,
+  .bebidas .container,
+  .padaria .container,
+  .produtos-container { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    padding: 0 15px; 
+  }
+
+  .mercearia .container .box,
+  .hortifruti .container .box,
+  .acougue .container .box,
+  .limpeza .container .box,
+  .higiene .container .box,
+  .frios .container .box,
+  .bebidas .container .box,
+  .padaria .container .box,
+  .produtos-container .box {
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .mercearia .container .box h2,
+  .hortifruti .container .box h2,
+  .produtos-container .box h2 { 
+      word-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+  }
+
+  .quick-view-btn {
+      top: 5px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+  }
+  .quick-view-btn i {
+      font-size: 18px;
+  }
+
+  .mercearia .container .box .card-quantity-selector,
+  .hortifruti .container .box .card-quantity-selector,
+  .acougue .container .box .card-quantity-selector,
+  .limpeza .container .box .card-quantity-selector,
+  .higiene .container .box .card-quantity-selector,
+  .frios .container .box .card-quantity-selector,
+  .bebidas .container .box .card-quantity-selector,
+  .padaria .container .box .card-quantity-selector,
+  .produtos-container .box .card-quantity-selector {
+      width: 100px; 
+      height: 35px; 
+      padding: 0 8px;
+      right: 5px;   
+      bottom: 5px;  
+  }
+
+  .card-quantity-selector .qty-btn.qty-remove i,
+  .card-quantity-selector .qty-btn.qty-add i {
+      font-size: 18px; 
+  }
+  .card-quantity-selector .qty-value {
+      font-size: 14px; 
+  }
+
+  .mercearia .container .box .cart.card-add-btn,
+  .hortifruti .container .box .cart.card-add-btn,
+  .acougue .container .box .cart.card-add-btn,
+  .limpeza .container .box .cart.card-add-btn,
+  .higiene .container .box .cart.card-add-btn,
+  .frios .container .box .cart.card-add-btn,
+  .bebidas .container .box .cart.card-add-btn,
+  .padaria .container .box .cart.card-add-btn,
+  .produtos-container .box .cart.card-add-btn {
+      width: 35px;  
+      height: 35px;
+      right: 5px;   
+      bottom: 5px; 
+  }
+
+  .cart.card-add-btn i {
+      font-size: 24px; 
+  }
+}
+
+@media (max-width: 576px) {
+  header .menu {
+    padding: 10px;
+  }
+  header .logo img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .secao-titulo {
+      display: flex !important;
+      flex-direction: row !important;      
+      justify-content: space-between !important; 
+      align-items: center !important;
+      width: 100% !important;
+      padding: 0 15px !important;
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }
+
+  .secao-titulo h2 {
+      margin: 0 !important;
+      padding: 0 !important;
+      text-align: left !important;
+      flex: 1 !important; 
+  }
+
+  .secao-titulo .nav-wrapper {
+      display: flex !important;
+      justify-content: flex-end !important;
+      width: auto !important; 
+  }
+
+
+  .secao-titulo .nav-wrapper a,
+  .secao-titulo a {
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+      padding-left: 10px;
+  }
+  
+  /* Esconde setas */
+  .nav-btns {
+      display: none !important;
+  }
+
+  .carrossel-produtos {
+      display: flex !important;           
+      overflow-x: auto !important;        
+      gap: 15px;                          
+      padding: 5px 15px 20px 15px;        
+      scroll-snap-type: x mandatory;      
+      -webkit-overflow-scrolling: touch;  
+  }
+
+  .carrossel-produtos .box {
+      flex: 0 0 165px !important;    
+      width: 165px !important;
+      scroll-snap-align: start;      
+      margin: 0 !important;
+  }
+
+  .carrossel-produtos::-webkit-scrollbar {
+      display: none;
+  }
+
+ /* --- Ajuste do Banner no Celular --- */
+.carousel-item {
+    height: 198px !important; /* Altura fixa (tenta 200px, talvez 220px fique muito esticado) */
+}
+
+.carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;      /* MUDANÇA AQUI: 'fill' obriga a imagem a caber inteira */
+    object-position: center !important;
+}
+
+  .banner {
+    margin-bottom: 40px;
+  }
+
+  section.categorias {
+    padding: 0 15px;
+    margin-top: 25px; 
+  }
+
+  .categorias-container {
+      display: flex; 
+      overflow-x: auto; 
+      gap: 20px; 
+      margin-top: 1rem;
+      padding: 10px 15px; 
+      grid-template-columns: none; 
+      scrollbar-width: none; 
+      -ms-overflow-style: none; 
+  }
+  .categorias-container::-webkit-scrollbar {
+      display: none; 
+  }
+
+  .categorias-container .div {
+      flex-basis: 90px; 
+      flex-shrink: 0;
+      height: auto; 
+      border-radius: 0 !important; 
+      background-color: transparent !important; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+      padding: 0; 
+      text-align: center;
+  }
+
+  .categorias-container .div a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90px;
+      height: 90px; 
+      border-radius: 50%;
+      margin-bottom: 10px; 
+      background-color: #fef4ea; 
+  }
+  
+  .categorias-container .div.box1 a { background-color: #fef4ea; }
+  .categorias-container .div.box2 a { background-color: #fef4ea; }
+  .categorias-container .div.box3 a { background-color: #fef4ea; }
+  .categorias-container .div.box4 a { background-color: #fef4ea; }
+  .categorias-container .div.box5 a { background-color: #fef4ea; }
+
+  .categorias-container div img {
+      width: 40px;  
+      height: 40px; 
+      object-fit: contain;
+      margin-bottom: 0; 
+  }
+
+  .categorias-container .div h2 {
+      font-size: 0.8rem; 
+      font-weight: 500;
+      line-height: 1.2;
+      color: #333;
+  }
+
+  .categorias-container .div span,
+  .categorias-container .div .bx,
+  .categorias-container .div a i {
+      display: none !important; 
+  }
+
+  section.produtos {
+    margin: 40px 0;
+    padding: 0; 
+  }
+
+  .produtos .cabeçalho h1 {
+    font-size: 22px;
+    padding: 0 15px; 
+  }
+
+  .produtos-container {
+    padding: 0 15px; 
+    margin-top: 20px;
+  }
+
+  /* Notificação Pop-up */
+  .cart-notification {
+      width: 90%;
+      left: 5%;
+      right: 5%;
+      bottom: 15px;
+      font-size: 0.9rem;
+      padding: 12px;
+      transform: none !important; 
+      visibility: hidden; 
+      opacity: 0;
+      transition: opacity 0.4s ease;
+  }
+  .cart-notification.show {
+      transform: none !important;
+      visibility: visible;
+      opacity: 1;
+  }
+
+    /* QUICK VIEW MOBILE */
+    .quick-view-modal {
+        width: 90% !important;
+        max-width: 400px;
+        padding: 20px !important;
+        max-height: 85vh;
+        overflow-y: auto;
+    }
+
+    .quick-view-content {
+        flex-direction: column !important; 
+        align-items: center;
+        gap: 15px;
+    }
+
+    .quick-view-content img {
+        width: 100% !important;
+        max-width: 220px !important; 
+        height: 220px !important;    
+        object-fit: contain;         
+        margin: 0 auto 10px auto;    
+        border: none;                
+    }
+
+    .quick-view-details {
+        width: 100%;
+        text-align: center; 
+    }
+
+    .quick-view-details h2 {
+        font-size: 20px !important; 
+        margin-top: 0 !important;   
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .quick-view-details h3 {
+        font-size: 22px !important; 
+        margin-bottom: 15px;
+    }
+    
+    .quick-view-details .add-to-cart-btn {
+        width: 100%; 
+        padding: 12px;
+    }
+
+    .quick-view-close {
+        top: 5px;
+        right: 10px;
+        font-size: 32px;
+        color: #333;
+        z-index: 100;
+    }
+    
+    
+    .carrossel-produtos .box .img-container,
+    .mercearia .container .box .img-container,
+    .hortifruti .container .box .img-container,
+    .acougue .container .box .img-container,
+    .bebidas .container .box .img-container,
+    .padaria .container .box .img-container,
+    .limpeza .container .box .img-container,
+    .higiene .container .box .img-container,
+    .frios .container .box .img-container,
+    .produtos-container .box .img-container {
+        height: 140px !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 10px !important;
+    }
+
+    .carrossel-produtos .box .img-container img,
+    .mercearia .container .box .img-container img,
+    .hortifruti .container .box .img-container img,
+    .acougue .container .box .img-container img,
+    .bebidas .container .box .img-container img,
+    .padaria .container .box .img-container img,
+    .limpeza .container .box .img-container img,
+    .higiene .container .box .img-container img,
+    .frios .container .box .img-container img,
+    .produtos-container .box .img-container img {
+        max-height: 100% !important;
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* AJUSTE DO TÍTULO DOS PRODUTOS NO MOBILE */
+    .carrossel-produtos .box h2,
+    .mercearia .container .box h2,
+    .hortifruti .container .box h2,
+    .acougue .container .box h2,
+    .bebidas .container .box h2,
+    .padaria .container .box h2,
+    .limpeza .container .box h2,
+    .higiene .container .box h2,
+    .frios .container .box h2,
+    .produtos-container .box h2 {
+        height: 50px !important;
+        font-size: 14px !important;     
+        font-weight: 400 !important; /* Fonte Fina igual ao PC */
+        overflow: hidden !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important; 
+        -webkit-box-orient: vertical !important;
+        margin-bottom: 5px !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* --- RODAPÉ MOBILE (CORRIGIDO) --- */
+    .rodape {
+        text-align: center;
+    }
+
+    .rodape-col {
+        width: 100% !important;
+        display: block !important;
+        margin-bottom: 30px;
+    }
+
+   
+.rodape-col h4 {
+    display: inline-block !important;
+    width: auto !important; 
+    position: relative !important;
+    margin-bottom: 25px !important;
+    border: none !important; /* Garante que não tenha bordas extras */
+}
+
+
+.rodape-col h4::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important;              /* Move para o meio do elemento */
+    transform: translateX(-50%) !important; /* Centraliza matematicamente */
+    bottom: -10px !important;          /* Distância do texto */
+    width: 50px !important;            /* Largura da linha */
+    height: 3px !important;            /* Altura da linha */
+    background-color: #eb1d25 !important; /* Cor vermelha */
+    display: block !important;
+}
+
+/* 3. Previne que apareçam linhas duplas ou fantasmas */
+.rodape-col h4::before {
+    display: none !important;
+    content: none !important;
+}
+    
+    /* Ícones embaixo (Display Block) */
+    .social-links {
+        display: block !important; 
+    }
+    
+    .social-links a {
+        display: inline-flex !important;
+        margin: 5px 8px !important;
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Remove linha cinza */
+    .footer-info {
+        border-top: none !important; 
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 240px;
+  }
+  .produtos-container .box h2,
+  .carrossel-produtos .box h2 {
+    font-size: 0.8rem;
+  }
+}
+
+/* ================================================= */
+/* --- NOVO RODAPÉ (MODERNO E RESPONSIVO) --- */
+/* ================================================= */
+.rodape {
+    background-color: #11213c; /* Azul escuro da marca */
+    color: #ffffff;
+    padding: 50px 0 20px 0;
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.rodape-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.rodape-col {
+    flex: 1;
+    min-width: 200px; /* Garante que não esprema */
+    margin-bottom: 20px;
+}
+
+/* Títulos das seções (Navegação, Serviços, etc) */
+.rodape-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+/* O traço vermelho embaixo do título */
+.rodape-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: #e63946; /* Vermelho destaque */
+    height: 3px;
+    width: 50px;
+    border-radius: 2px;
+}
+
+/* Links */
+.rodape-col .linha a {
+    display: block;
+    font-size: 15px;
+    color: #b3b3b3; /* Cinza claro para não cansar a vista */
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.rodape-col .linha a:hover {
+    color: #ffffff;
+    padding-left: 8px; /* Efeito de "andar" para o lado quando passa o mouse */
+}
+
+/* Ícones das Redes Sociais (Desktop) */
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    border-radius: 50%; /* Redondo */
+    margin-right: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* Garante que o ícone dentro fique branco */
+.social-links a i {
+    font-size: 22px;
+    color: #ffffff !important; 
+}
+
+.social-links a:hover {
+    background-color: #e63946; /* Fica vermelho ao passar o mouse */
+    transform: translateY(-3px); /* Sobe um pouquinho */
+}
+
+/* Parte de baixo (Copyright e Endereço) */
+.footer-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha fina separando */
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #b3b3b3;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-info a {
+    color: #e63946;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}

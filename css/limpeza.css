@@ -1,0 +1,561 @@
+.subcategoria-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px 4%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section.limpeza {
+    flex-grow: 1;
+}
+
+.menu-categorias {
+    width: 100%;
+    padding: 2px 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.categorias-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.categorias-nav a {
+    position: relative;
+    color: #11213c;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.categorias-nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #eb1d25;
+    left: 0;
+    bottom: 10px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s;
+    border-radius: 1px;
+}
+
+.categorias-nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.filter-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    font-family: sans-serif;
+}
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.icones a {
+    color: #555;
+    text-decoration: none;
+}
+
+.icones a:hover {
+    text-decoration: underline;
+}
+
+.icones span {
+    color: #888;
+}
+
+/* .page-title FOI REMOVIDO */
+
+.filter-group {
+    border-bottom: none; /* MODIFICADO */
+    padding-bottom: 0;   /* MODIFICADO */
+    margin-bottom: 13px;
+    margin-top: 1rem;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.filter-group-header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #11213c;
+    padding-bottom: 5px; /* MODIFICADO */
+}
+
+/* .filter-option, label, input FORAM REMOVIDOS */
+
+.limpeza .cabeçalho h1 {
+    padding: 20px;
+    font-size: 25px;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+/* === ESTILOS DOS CARDS ATUALIZADOS (COPIADO DE acougue.css) === */
+
+.limpeza .container {
+    display: grid;
+    gap: 10px;
+    margin-top: 2rem;
+    padding: 1rem;
+    flex: 1;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.limpeza .container .box {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.limpeza .container .box .img-container {
+    position: relative; 
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.limpeza .container .box .img-container img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 0;
+}
+
+.limpeza .container .box span {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.limpeza .container .box h2 {
+    font-size: 0.85rem;
+    font-weight: 400; 
+    color: #333;
+    margin: 5px 0 10px 0;
+    flex-grow: 1;
+}
+
+.limpeza .container .box .preço {
+   font-size: 1rem; 
+    font-weight: 550; 
+    margin-top: 0;
+    color: #11213c;
+}
+
+.limpeza .container .box .preço span {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: normal;
+}
+
+.limpeza .container .box .desconto {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background-color: #eb1d25;
+    color: white;
+    padding: 4px 18px;
+}
+
+/* === Botão "+" (Original) === */
+.limpeza .container .box .cart.card-add-btn {
+    background-color: #11213c; /* Cor azul escura */
+    position: absolute;
+    right: 10px;  
+    bottom: 10px; 
+    border-radius: 50%;
+    height: 40px; 
+    width: 40px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 6; /* Fica por cima do seletor_qtd */
+}
+
+.limpeza .container .box .cart.card-add-btn i {
+    color: #ffffff;
+    font-size: 28px; 
+    line-height: 1; 
+}
+
+.limpeza .container .box .cart.card-add-btn.disponivel {
+    cursor: pointer;
+}
+
+.limpeza .container .box .cart.card-add-btn.indisponivel {
+    cursor: default;
+    pointer-events: none;
+    background-color: #cccccc; 
+}
+
+.limpeza .container .box .cart.card-add-btn.disponivel:hover {
+    background-color: #c70101; /* Cor vermelha no hover */
+    transform: scale(1.05);
+}
+
+.limpeza .container .box .cart.card-add-btn.indisponivel:hover {
+    background-color: #cccccc;
+    transform: none;
+}
+
+
+.limpeza .container .box .card-quantity-selector {
+    display: none; 
+    width: 130px; 
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px; 
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 5; 
+}
+
+.limpeza .container .box .card-quantity-selector .qty-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #11213c;
+}
+
+.limpeza .container .box .card-quantity-selector .qty-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.limpeza .container .box .card-quantity-selector .qty-btn.qty-remove i {
+    font-size: 22px;
+    color: #777;
+    transition: color 0.2s ease;
+}
+.limpeza .container .box .card-quantity-selector .qty-btn.qty-remove:hover i {
+    color: #d9534f;
+}
+
+.limpeza .container .box .card-quantity-selector .qty-btn.qty-add i {
+    font-size: 24px;
+    color: #001147; 
+    transition: color 0.2s ease;
+}
+.limpeza .container .box .card-quantity-selector .qty-btn.qty-add:hover i {
+    color: #264653;
+}
+
+
+.limpeza .container .box.in-cart .card-add-btn {
+    display: none;
+}
+
+/* 2. MOSTRA o novo seletor de quantidade */
+.limpeza .container .box.in-cart .card-quantity-selector {
+    display: flex;
+}
+
+
+.quick-view-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    opacity: 0; 
+    z-index: 7; /* Fica por cima de tudo */
+}
+
+.limpeza .container .box .img-container:hover .quick-view-btn {
+    opacity: 1;
+}
+.quick-view-btn i {
+    font-size: 20px;
+    color: #333;
+}
+.quick-view-btn:hover {
+    background-color: #fff;
+    transform: scale(1.1);
+}
+
+.quick-view-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.quick-view-overlay.active {
+    display: flex; 
+}
+
+.quick-view-modal {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    padding: 20px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.quick-view-overlay.active .quick-view-modal {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.quick-view-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #888;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.quick-view-close:hover {
+    color: #333;
+}
+
+.quick-view-content {
+    display: flex;
+    gap: 20px;
+}
+
+.quick-view-content img {
+    width: 50%;
+    max-width: 350px;
+    height: 350px;         
+    object-fit: contain;   
+    object-position: center; 
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: #fff; 
+}
+
+.quick-view-details {
+    flex: 1;
+}
+
+.quick-view-details h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.quick-view-details h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 15px;
+}
+
+.quick-view-details h3 span {
+    font-size: 16px;
+    color: #888;
+    font-weight: normal;
+}
+
+.quick-view-details .add-to-cart-btn {
+    background-color: #11213c;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.quick-view-details .add-to-cart-btn:hover {
+    background-color: #2c3e50;
+}
+
+
+.mobile-controls,
+.close-filter-button,
+.mobile-menu-button,
+.mobile-menu-panel {
+    display: none;
+}
+
+#filter-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1099;
+}
+
+#filter-overlay.active {
+    display: block;
+}
+
+.cabeçalho.dois {
+    background-color: #f0f2f5;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.cabeçalho.dois h1 {
+    color: #0d1e37;
+    margin: 0;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.filter-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.filter-link i {
+    font-size: 20px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.filter-link:hover {
+    color: #eb1d25;
+}
+
+.filter-link:hover i {
+    color: #eb1d25;
+}
+
+.filter-link.active {
+    color: #eb1d25; 
+    font-weight: bold; 
+}
+
+.filter-link.active i {
+    color: #eb1d25; 
+}
+
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    margin: 40px 0; 
+    width: 100%;
+}
+
+.paginacao a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;         
+    height: 40px;         
+    border: 1px solid #0066cc;
+    border-radius: 6px;   
+    text-decoration: none;
+    color: #0066cc;      
+    font-weight: 600;     
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+
+.paginacao a:hover {
+    background-color: #e6f0ff; 
+}
+
+.paginacao a.active {
+    background-color: #0066cc; 
+    color: #ffffff;            
+    border-color: #0066cc;
+    cursor: default;           
+}
+
+.paginacao .prev,
+.paginacao .next {
+    font-size: 18px;
+    font-weight: bold;
+    border: none; 
+}

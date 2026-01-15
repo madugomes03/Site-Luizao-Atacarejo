@@ -1,0 +1,11 @@
+
+configuracao.php
+php/configuracao.php
+
+# Opcional: Ignorar conexao.php se você quiser (mas esse código que você mandou é seguro)
+conexao.php 
+php/conexao.php
+
+# Ignora logs de erro
+error_log
+*.log

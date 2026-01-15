@@ -1,0 +1,9 @@
+<?php 
+
+	define('DB_HOSTNAME', 'localhost'); //Nome de HOST
+	define('DB_USERNAME', 'hg3c0112_userluizao_bd'); //Usuário
+	define('DB_PASSWORD', 'LuizaoAtacarejo32@'); //Senha
+	define('DB_DATABASE', 'hg3c0112_bdluizao'); //Nome do BD
+	define('DB_CHARSET', 'utf8');	
+	
+?>

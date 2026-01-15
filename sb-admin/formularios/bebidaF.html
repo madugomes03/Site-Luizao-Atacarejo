@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Bebidas</title>
+    <link rel="stylesheet" href="../css/Fstyle.css">
+</head>
+
+<body>
+    
+      <a href="../painel.php" class="btn-voltar">
+    <span class="icone-seta"><</span> Voltar
+</a>
+
+
+    <div class="container">
+        <form action="../phpADM/cadastroB.php" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Cadastro dos produtos - Seção Bebidas</h3>
+                    <div class="input-box">
+                        <span>Produto :</span>
+                        <input type="text" name="nome" placeholder="Ex.: Refrigerante Coca-Cola Diet">
+                    </div>
+                    <div class="input-box">
+                        <span>Unidade de medida :</span>
+                        <input type="text" name="descricao" placeholder="Ex.: Unidade ">
+                    </div>
+                    
+                   <div class="input-box">
+                        <span>Subcategoria :</span>
+                        <select name="subcategoria" required>
+                            <option selected value="" disabled>Selecione uma opção</option>
+                            
+                            <option value="refrigerante">Refrigerantes/Energéticos</option>
+                            <option value="suco">Sucos e Refrescos</option>
+                            <option value="cerveja">Alcoólicas</option>
+                            <option value="destilados">Bebidas Lácteas e Outros</option>
+                            
+                        </select>
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Valor :</span>
+                            <input name="preco" type="text" placeholder="99,99">
+                        </div>
+                    </div>
+
+                    <div class="input-box-radio">
+                        <span>Vai estar disponível para venda? :</span><br><br>
+
+                        <input type="radio" id="disponivel" name="status" value="disponivel" checked>
+                        <label for="disponivel">Sim</label><br>
+
+                        <input type="radio" id="indisponivel" name="status" value="indisponivel">
+                        <label for="indisponivel">Não</label>
+                    </div>
+
+                   <div class="input-box img">
+    <span>Imagem :</span>
+    <input type="file" name="imagem" data-image-input required>
+</div>
+
+<div class="preview-image" style="display: flex; justify-content: center; margin-top: 10px;">
+    <img data-image-preview height="100%" style="max-height: 200px; object-fit: contain;">
+</div>
+                <script>
+                    const imageInput = document.querySelector("[data-image-input]");
+                    const imagePreviewElement = document.querySelector("[data-image-preview]");
+
+                    imageInput.onchange = () => {
+                        const [file] = imageInput.files;
+                        if (file) {
+                            imagePreviewElement.src = URL.createObjectURL(file);
+                        }
+                    };
+                </script>
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Cadastrar produto</button>
+        </form>
+    </div>
+
+</body>
+</html>
