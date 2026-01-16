@@ -6,6 +6,7 @@ Sistema de gestão para atacarejo com integração à API do WhatsApp. Permite q
 O desafio aqui foi criar uma plataforma que unisse uma interface limpa para o cliente visualizar os produtos e uma área administrativa robusta para o proprietário gerenciar o estoque.
 
 **Destaques do projeto:**
+
 ✅ **Organização por Setores:** Páginas específicas para Açougue, Padaria, Frios, etc.
 
 ✅ **Painel Administrativo:** Área segura (Login) para cadastro, edição e exclusão de produtos.
