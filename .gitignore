@@ -9,3 +9,4 @@ php/conexao.php
 # Ignora logs de erro
 error_log
 *.log
+Imagem_videos/
