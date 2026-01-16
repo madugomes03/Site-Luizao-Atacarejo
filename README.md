@@ -9,7 +9,9 @@ O desafio aqui foi criar uma plataforma que unisse uma interface limpa para o cl
 ✅ **Organização por Setores:** Páginas específicas para Açougue, Padaria, Frios, etc.
 
 ✅ **Painel Administrativo:** Área segura (Login) para cadastro, edição e exclusão de produtos.
+
 ✅ **Banco de Dados Dinâmico:** Integração completa com MySQL para manter os preços sempre atualizados.
+
 ✅ **Interface Responsiva:** Layout adaptável para acesso via celular ou computador (baseado em SB Admin).
 
 Uma solução eficiente para eliminar planilhas manuais e centralizar a operação do mercado.
