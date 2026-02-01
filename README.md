@@ -21,7 +21,7 @@ Sistema de gestão completo para atacarejo com integração à API do WhatsApp. 
 
 ---
 
-## 🚀 Destaques do Projeto
+## Destaques do Projeto
 
 Uma solução eficiente para eliminar planilhas manuais e centralizar a operação do mercado.
 
@@ -33,7 +33,7 @@ Uma solução eficiente para eliminar planilhas manuais e centralizar a operaç�
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Back-end:** [PHP](https://www.php.net/)
 * **Front-end:** HTML5, CSS3, JavaScript
@@ -42,7 +42,7 @@ Uma solução eficiente para eliminar planilhas manuais e centralizar a operaç�
 
 ---
 
-## ⚙️ Como Configurar (Instalação)
+## Como Configurar (Instalação)
 1.  Clone este repositório.
 2.  Copie o arquivo `conexao.example.php` e renomeie para `conexao.php`.
 3.  Abra o `conexao.php` e insira suas credenciais do banco (usuário e senha).
