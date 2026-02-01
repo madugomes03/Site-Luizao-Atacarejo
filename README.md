@@ -15,7 +15,8 @@ Sistema de gestão completo para atacarejo com integração à API do WhatsApp. 
   <br><br>
   <img width="100%" alt="Catálogo de Produtos" src="https://github.com/user-attachments/assets/d51493a2-d6b3-460f-bd96-71caf0f81b01" />
   <br><br>
-  <img width="100%" alt="Painel Administrativo" src="https://github.com/user-attachments/assets/3ef651df-4ec6-4b90-bed8-67349250a38e" />
+  <img width="100%" alt="Painel Administrativo" src="https://github.com/user-attachments/assets/603db196-d221-4d25-8e18-d2417fd977a7" />
+  
 </div>
 
 ---
