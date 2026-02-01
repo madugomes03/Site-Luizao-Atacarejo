@@ -3,7 +3,6 @@
 Sistema de gestão para atacarejo com integração à API do WhatsApp. Permite que o cliente monte o carrinho e finalize o pedido enviando a lista formatada diretamente para o chat da loja, simplificando o fluxo de pagamento.
 
 ## 🚀 Sobre o Projeto
-O desafio aqui foi criar uma plataforma que unisse uma interface limpa para o cliente visualizar os produtos e uma área administrativa robusta para o proprietário gerenciar o estoque.
 
 **Destaques do projeto:**
 
