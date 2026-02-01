@@ -37,6 +37,7 @@ Uma solução eficiente para eliminar planilhas manuais e centralizar a operaç�
 ## ⚠️ Nota de Segurança
 Arquivos sensíveis como senhas de banco de dados não foram incluídos no repositório. Utilize os arquivos `.example` fornecidos como modelo.
 
+## Imagens do Site 
 
 <img width="1887" height="854" alt="Captura de tela 2026-02-01 174945" src="https://github.com/user-attachments/assets/1bc24349-2194-4c5a-8262-58ab007b1128" />
 
