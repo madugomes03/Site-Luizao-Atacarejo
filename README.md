@@ -41,10 +41,12 @@ Uma solução eficiente para eliminar planilhas manuais e centralizar a operaç�
 
 ---
 
-## ⚙️ Como Configurar (Instalação Local)
+## ⚙️ Como Configurar (Instalação)
+1.  Clone este repositório.
+2.  Copie o arquivo `conexao.example.php` e renomeie para `conexao.php`.
+3.  Abra o `conexao.php` e insira suas credenciais do banco (usuário e senha).
+4.  Importe o banco de dados (se houver arquivo `.sql`).
+5.  Rode em um servidor local (XAMPP/WAMP).
 
-Para rodar o projeto na sua máquina:
-
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO.git](https://github.com/SEU-USUARIO/NOME-DO-REPO.git)
+## ⚠️ Nota de Segurança
+Arquivos sensíveis como senhas de banco de dados não foram incluídos no repositório. Utilize os arquivos `.example` fornecidos como modelo.
